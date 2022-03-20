@@ -26,6 +26,10 @@ public class Publisher {
         this.email = email;
     }
     public Publisher(){}
+    
+    public String toString(){
+        return "\n\nPublisher: " + name + "\nPhone: " + phone + "\nEmail: " + email;
+    }
 
     public String toString(){
         return "\n\nBook: " + books + "\nName: " + name + "\nPhone: " + phone + "\nEmail: " + email;
