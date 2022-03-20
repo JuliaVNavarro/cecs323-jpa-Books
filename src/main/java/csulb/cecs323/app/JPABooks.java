@@ -76,7 +76,7 @@ public class JPABooks {
 
       tx.begin();
       List <Publisher> publishers = new ArrayList<Publisher>();
-      
+
       /*// List of publishers that I want to persist.  I could just as easily done this with the seed-data.sql
       List <Owners> owners = new ArrayList<Owners>();
       // Load up my List with the Entities that I want to persist.  Note, this does not put them
