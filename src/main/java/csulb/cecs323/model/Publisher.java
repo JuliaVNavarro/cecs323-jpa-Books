@@ -27,4 +27,7 @@ public class Publisher {
     }
     public Publisher(){}
 
+    public String toString(){
+        return "\n\nBook: " + books + "\nName: " + name + "\nPhone: " + phone + "\nEmail: " + email;
+    }
 }

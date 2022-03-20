@@ -15,6 +15,8 @@ package csulb.cecs323.app;
 // Import all of the entity classes that we have written for this application.
 
 
+import csulb.cecs323.model.Publisher;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -62,8 +64,8 @@ public class JPABooks {
       LOGGER.fine("Creating EntityManagerFactory and EntityManager");
       EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPABooks");
       EntityManager manager = factory.createEntityManager();
-      // Create an instance of CarClub and store our new EntityManager as an instance variable.
-      JPABooks carclub = new JPABooks(manager);
+      // Create an instance of jpaBooks and store our new EntityManager as an instance variable.
+      JPABooks  jpaBooks = new JPABooks(manager);
 
 
       // Any changes to the database need to be done within a transaction.
@@ -73,7 +75,9 @@ public class JPABooks {
       EntityTransaction tx = manager.getTransaction();
 
       tx.begin();
-      /*// List of owners that I want to persist.  I could just as easily done this with the seed-data.sql
+      List <Publisher> publishers = new ArrayList<Publisher>();
+      
+      /*// List of publishers that I want to persist.  I could just as easily done this with the seed-data.sql
       List <Owners> owners = new ArrayList<Owners>();
       // Load up my List with the Entities that I want to persist.  Note, this does not put them
       // into the database.
